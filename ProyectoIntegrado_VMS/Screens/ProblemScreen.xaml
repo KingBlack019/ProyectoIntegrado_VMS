@@ -3,12 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoIntegrado_VMS.Screens.ProblemScreen">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="30">
             <Label Text="Informar de un problema "
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" FontSize="24"/>
             <!-- AGREGAR OPCIONES DE PROBLEMA, LISTA DESPLAZABLE { BUG, CONEXIÓN, CUENTA, OTRO } -->
-            <Button Text="Enviar" Clicked="OnSendReportClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+            <Picker x:Name="ProblemPicker"/>
+            <ScrollView>
+                <Editor Placeholder="Escribe aquí el problema"
+        AutoSize="TextChanges"
+        HeightRequest="200"/>
+            </ScrollView>
+            
+            <Button Text="Enviar" Clicked="OnSendReportClicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="32"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

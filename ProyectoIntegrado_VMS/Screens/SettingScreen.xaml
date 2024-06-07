@@ -2,39 +2,79 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoIntegrado_VMS.Screens.SettingScreen">
-    <ContentPage.Content>
-        <StackLayout>
-        <!-- DATOS PERSONALES -->
-        
+    <StackLayout VerticalOptions="FillAndExpand" Margin="20">
+        <AbsoluteLayout VerticalOptions="Start" HorizontalOptions="Start">
+            <!-- Fondo con gradiente -->
+            <BoxView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" >
+                <BoxView.Background >
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="Green" Offset="0.0" />
+                        <GradientStop Color="Blue" Offset="1.0" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+                
+            </BoxView>
+            <!-- Texto superpuesto -->
+            <Label Text="Datos personales"
+                 AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+                 AbsoluteLayout.LayoutFlags="PositionProportional"
+                    HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="Start"
+                   TextColor="White"
+            FontSize="Large" Margin="20"/>
+        </AbsoluteLayout>
+        <StackLayout Spacing="20">
+
             <Label x:Name="nombreLabel"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                   FontSize="24"/>
-            
+                HorizontalOptions="StartAndExpand"
+                   Margin="30,0,0,0"
+                   FontSize="24" />
+
             <Label x:Name="apellidosLabel"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" 
+                   Margin="30,0,0,0"
                    FontSize="24"/>
-            
+
             <Label x:Name="fechaNacLabel"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand"
+                   Margin="30,0,0,0"
                    FontSize="24"/>
-        </StackLayout>
 
-        <!-- CONFIGURACION -->
-        <StackLayout Margin="20">
-            <Label Text="Configuración"/>
         </StackLayout>
+        <StackLayout Spacing="30">
+            <AbsoluteLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <!-- Fondo con gradiente -->
+                <BoxView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" >
+                    <BoxView.Background >
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="Green" Offset="0.0" />
+                            <GradientStop Color="Blue" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
 
-        <StackLayout Padding="30" >
+                </BoxView>
+                <!-- Texto superpuesto -->
+                <Label Text="Configuración"
+         AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+         AbsoluteLayout.LayoutFlags="PositionProportional"
+            HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Start"
+           TextColor="White"
+    FontSize="Large" Margin="20"/>
+            </AbsoluteLayout>
             <!-- Idioma -->
+            <Label Text="Idioma: " FontSize="24" Margin="30,0,0,0"/>
+            <Picker x:Name="LanguagePicker" />
             <!-- Ayuda -->
-            <Button Text="Info" Clicked="InfoButtonClicked" HorizontalOptions="FillAndExpand" FontSize="24"/>
+            <Button Text="Info" Clicked="OnInfoButtonClicked" HorizontalOptions="FillAndExpand" FontSize="24"/>
             <!-- Sonido (opcional) -->
             <!-- Informar de un problema -->
-            <Button Text="Informar de un problema" Clicked="ProblemButtonClicked" HorizontalOptions="FillAndExpand" FontSize="24"/>
+            <Button Text="Informar de un problema" Clicked="OnProblemButtonClicked" HorizontalOptions="FillAndExpand" FontSize="24" />
+        </StackLayout>
+            
         </StackLayout>
 
-    </ContentPage.Content>
 </ContentPage>
