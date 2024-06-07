@@ -17,18 +17,26 @@ namespace ProyectoIntegrado_VMS.Screens
 		{
 			InitializeComponent();
 
-			// Asignar valores
+			// Asignar valores ( los obtiene del usuario de la base de datos )
 			string nombre = "Vicente";
 			string apellidos = "Marin Suazo";
 			string fechaNacimiento = "19/03/2004";
 
 			insertarValores(nombre, apellidos, fechaNacimiento);
-
+			agregarIdiomas();
 		}
 
-        private async void InfoButtonClicked(object sender, EventArgs e)
+        private void agregarIdiomas()
         {
-            await Navigation.PushAsync(new InfoScreen());
+			var lista = new List<string>()
+			{
+				"Español", "Ingles"
+			};
+			foreach (var item in lista)
+			{
+				LanguagePicker.Items.Add(item);
+			}
+
         }
 
         private void insertarValores(string nombre, string apellidos, string fechaNac)
@@ -37,5 +45,14 @@ namespace ProyectoIntegrado_VMS.Screens
 			apellidosLabel.Text = "Apellidos: " + apellidos;
 			fechaNacLabel.Text = "Fecha nacimiento: " + fechaNac;
 		}
-	}
+		
+        private async void OnInfoButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new InfoScreen());
+        }
+        private async void OnProblemButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProblemScreen());
+        }
+    }
 }
