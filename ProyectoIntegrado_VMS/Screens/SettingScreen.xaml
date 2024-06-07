@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIntegrado_VMS.Screens.SettingScreen">
+    <ContentPage.Content>
+
+        <!-- DATOS PERSONALES -->
+        <StackLayout Margin="20">
+            <Label Text="Datos personales"/>
+        </StackLayout>
+        
+        <StackLayout Padding="30" >
+            
+            <Label x:Name="nombreLabel"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="24"/>
+            
+            <Label x:Name="apellidosLabel"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="24"/>
+            
+            <Label x:Name="fechaNacLabel"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="24"/>
+        </StackLayout>
+
+        <!-- CONFIGURACION -->
+        <StackLayout Margin="20">
+            <Label Text="Configuración"/>
+        </StackLayout>
+
+        <StackLayout Padding="30" >
+            <!-- Idioma -->
+            <!-- Ayuda -->
+            <Button Text="Info" Clicked="InfoButtonClicked" HorizontalOptions="FillAndExpand" FontSize="24"/>
+            <!-- Sonido (opcional) -->
+            <!-- Informar de un problema -->
+            <Button Text="Informar de un problema" Clicked="ProblemButtonClicked" HorizontalOptions="FillAndExpand" FontSize="24"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

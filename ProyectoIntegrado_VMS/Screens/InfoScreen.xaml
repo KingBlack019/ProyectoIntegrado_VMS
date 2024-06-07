@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIntegrado_VMS.Screens.InfoScreen">
+    <ContentPage.Content>
+      <StackLayout>
+          <Label Text="Bienvenido!" FontSize="32"/>
+            <Label Text="Esta es una aplicación hecha para realizar y generar actividades"
+                   FontSize="Medium"/>
+          
+          <!-- Primera parte -->
+            <Label Text="Una vez iniciada la sesión, en 'HOME' aparecerá una serie de eventos o actividades en la que podrás acceder.
+                   También existe un filtro para saber en qué fechas desea acceder al evento para poder gestionar tu tiempo perfectamente sin que hayan inconvenientes!!!
+                   "
+                   FontSize="Medium"/>
+          <!-- AGREGAR UNA O VARIAS IMAGENES DE EJEMPLO -->
+
+            <Label Text="Una vez observadas las actividades que nos interesan, le daremos al boton 'Entrar' y accederemos a la actividad. Nos cambiaremos de pantalla y observaremos el contenido de forma 
+                   más explícita de la actividad para que finalmente nos inscribamos pulsandole al boton 'Inscribirse'" 
+                   FontSize="Medium"/>
+          <!-- GIFT DE COMO SE EVENTO Y UN MINIVIDEO DE LAS PERSONAS INSCRITAS -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="creado por: Vicente Marín " FontSize="Medium" FontAttributes="Bold" TextColor="Aquamarine"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+          
+            <AbsoluteLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <!-- Fondo con gradiente -->
+                <BoxView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                    <BoxView.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="Red" Offset="0.0" />
+                            <GradientStop Color="Blue" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <!-- Texto superpuesto -->
+                <Label Text="Texto con fondo de gradiente"
+               AbsoluteLayout.LayoutBounds="0.5, 0.5, -1, -1"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               TextColor="White"
+               FontSize="Large" />
+            </AbsoluteLayout>
+        </StackLayout>
+        
+  </ContentPage.Content>
+</ContentPage>

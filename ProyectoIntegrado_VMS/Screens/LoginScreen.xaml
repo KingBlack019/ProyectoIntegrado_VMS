@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIntegrado_VMS.Screens.LoginScreen">
+    <ContentPage.Content>
+        <StackLayout Padding="30" VerticalOptions="CenterAndExpand">
+            <Image 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   HeightRequest="200"
+                    WidthRequest="200"
+                   Margin="0,0,0,50" Aspect="Fill" IsEnabled="True" Source="https://static.vecteezy.com/system/resources/thumbnails/000/579/928/small/01-01.jpg"/>
+
+            <Entry x:Name="usernameEntry"
+                   Placeholder="Username"
+                   PlaceholderColor="#888888"
+                   TextColor="#333333"
+                   BackgroundColor="#FFFFFF"
+                   Margin="0,20,0,10"
+                   HeightRequest="50"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Entry x:Name="passwordEntry"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   PlaceholderColor="#888888"
+                   TextColor="#333333"
+                   BackgroundColor="#FFFFFF"
+                   Margin="0,10,0,20"
+                   HeightRequest="50"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Button Text="Login"
+                    FontSize="24"
+                    TextColor="#FFFFFF"
+                    BackgroundColor="#132635"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="LoginButtonClicked"
+                    >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="#132635"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Focused">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="#0F1E29"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+
+
+            <Button Text="Forgot your password?"
+                    Clicked="ForgotPasswordClicked"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="#888888"
+                    BackgroundColor="Transparent"
+                   Margin="0,10,0,0" Padding="20,0,0,20"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

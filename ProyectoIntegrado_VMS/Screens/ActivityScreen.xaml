@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIntegrado_VMS.Screens.ActivityScreen">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <!-- Contenido cabecera -->
+            <StackLayout BackgroundColor="#EA8171" Padding="10">
+                <Label x:Name="activityLabel" Text="activity" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="32"/>
+            </StackLayout>
+
+            <!-- Contenido principal -->
+            <StackLayout BackgroundColor="LightGray" Padding="10">
+                <Label x:Name="hourLabel" Text="hour" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" TextColor="Aquamarine"/>
+                <Label x:Name="descLabel" Text="descripcion" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" TextColor="Aquamarine"/>
+                <Label x:Name="peopleLabel" Text="personas" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Large" TextColor="Aquamarine" />
+            </StackLayout>
+            
+            <!-- Contenido para entrar a la actividad -->
+            <StackLayout BackgroundColor="White" Padding="10">
+                <Button Text="Inscribirse" Clicked="EnterActivityClicked" HorizontalOptions="FillAndExpand" FontSize="24" TextColor="Red"/>   
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
